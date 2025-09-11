@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router";
+import Spinner from "../components/Spinner";
 const  API_URL = import.meta.env.VITE_API_COIN_URL;
 const CoinDetailsPage = () => {
     const { id } = useParams();
@@ -37,7 +38,7 @@ const CoinDetailsPage = () => {
                 {coin ? `${coin.name} (${coin.symbol.toUpperCase()})` : 'Coin Details'}
             </h1>
 
-            {loading && <p>Loading...</p>}
+            {loading && <Spinner />}
             {error && <div className="error"> ❌ {error}</div>}
             {!loading && !error && (<>
                 <img src={coin.image.large} alt={coin.name} 
@@ -50,7 +51,7 @@ const CoinDetailsPage = () => {
                     <h4>24h High: ₱{coin.market_data.high_24h.php.toLocaleString()}</h4>
                     <h4>24h Low: ₱{coin.market_data.low_24h.php.toLocaleString()}</h4>
                     <h4>
-                        24h Price Change: ${coin.market_data.price_change_24h.toFixed(2)} (
+                        24h Price Change: ₱{coin.market_data.price_change_24h.toFixed(2)} (
                         {coin.market_data.price_change_percentage_24h.toFixed(2)}%)
                     </h4>
                     <h4>
@@ -61,11 +62,11 @@ const CoinDetailsPage = () => {
                     </h4>
                     <h4>Max Supply: {coin.market_data.max_supply?.toLocaleString() || 'N/A'}</h4>
                     <h4>
-                        All-Time High: ${coin.market_data.ath.php.toLocaleString()} on{' '}
+                        All-Time High: ₱{coin.market_data.ath.php.toLocaleString()} on{' '}
                         {new Date(coin.market_data.ath_date.php).toLocaleDateString()}
                     </h4>
                     <h4>
-                        All-Time Low: ${coin.market_data.atl.usd.toLocaleString()} on{' '}
+                        All-Time Low: ₱{coin.market_data.atl.usd.toLocaleString()} on{' '}
                         {new Date(coin.market_data.atl_date.usd).toLocaleDateString()}
                     </h4>
                     <h4>Last Updated: {new Date(coin.last_updated).toLocaleString()}</h4>
