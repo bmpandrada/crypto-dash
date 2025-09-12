@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router";
 import Spinner from "../components/Spinner";
+import CoinCart from "../components/CoinChart";
 const  API_URL = import.meta.env.VITE_API_COIN_URL;
 const CoinDetailsPage = () => {
     const { id } = useParams();
@@ -49,6 +50,7 @@ const CoinDetailsPage = () => {
                     <h3>Current Price: ₱{coin.market_data.current_price.php.toLocaleString()}</h3>
                     <h4>Market Cap: ₱{coin.market_data.market_cap.php.toLocaleString()}</h4>
                     <h4>24h High: ₱{coin.market_data.high_24h.php.toLocaleString()}</h4>
+                    <h4>24h High: ₱{coin.market_data.high_24h.php.toLocaleString()}</h4>
                     <h4>24h Low: ₱{coin.market_data.low_24h.php.toLocaleString()}</h4>
                     <h4>
                         24h Price Change: ₱{coin.market_data.price_change_24h.toFixed(2)} (
@@ -71,6 +73,9 @@ const CoinDetailsPage = () => {
                     </h4>
                     <h4>Last Updated: {new Date(coin.last_updated).toLocaleString()}</h4>
                 </div>
+
+            <CoinCart coinId={coin.id} />
+
                 <div className="coin-details-links">
                     {coin.links.homepage[0] && (
                         <p>
