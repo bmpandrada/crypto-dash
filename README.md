@@ -1,13 +1,31 @@
-# React + Vite
+### 📊 Crypto Dashboard
+A personal project to track cryptocurrency prices and visualize trends using interactive charts. Built with **React**, **Chart.js**, and **Tailwind CSS**, fetching data from the **CoinGecko API**.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+### 💡 Features
+- Display live cryptocurrency prices and market trends using **CoinGecko API**  
+- Interactive charts using **Chart.js**  
+- Responsive design for desktop and mobile  
+- Lightweight and visually clean UI
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+### 🛠️ Tech Stack
+- **Frontend:** React, TypeScript  
+- **Data Visualization:** Chart.js  
+- **Styling:** Tailwind CSS  
+- **API:** CoinGecko public API  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# crypto-dash
+---
+
+### 📸 Screenshots
+![Crypto Dashboard Screenshot](https://res.cloudinary.com/bmpa-dev/image/upload/v1761019520/Screenshot_2025_10_10_154901_3b5d693cdc.png)
+
+---
+
+### 🚀 Key Takeaways
+- Practiced building interactive **data visualizations** in React  
+- Learned to integrate **Chart.js** with React components  
+- Gained experience fetching live data from the **CoinGecko API**  
+- Improved **responsive design** skills using Tailwind CSS
